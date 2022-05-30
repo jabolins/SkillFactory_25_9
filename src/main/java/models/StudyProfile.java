@@ -2,7 +2,7 @@ package models;
 
 public enum StudyProfile {
     PHYSICS("физика")
-    , ECONOMIC("медицина")
+    , ECONOMIC("экономика")
     , LINGUISTICS("лингвистика")
     , MEDICINE("медицина")
     , MATHEMATICS("математика")
