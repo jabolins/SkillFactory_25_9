@@ -74,7 +74,6 @@ public class ReadXls {
             }
         }
         return students;
-
     }
 
     public static ArrayList<University> UniversitiesFromXls() {
