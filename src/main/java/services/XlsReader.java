@@ -16,11 +16,11 @@ import java.util.Iterator;
 
 import static org.apache.poi.ss.usermodel.CellType.NUMERIC;
 
-public class ReadXls {
+public class XlsReader {
 
     private static String filePath = "src/main/resources/universityInfo.xlsx";
 
-    private ReadXls() {
+    private XlsReader() {
     }
 
     public static ArrayList<Student> StudentsFromXls() {

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<Student> students = ReadXls.StudentsFromXls();
+        ArrayList<Student> students = XlsReader.StudentsFromXls();
         StudentsComparator studentsComparator =
                 PickComparator.getStudentComparator(StudentComparatorTypes.AVG_EXAM_SCORE);
         students.sort(studentsComparator);
@@ -40,7 +40,7 @@ public class Main {
             System.out.println(studentFromJson);
         });
 
-        ArrayList<University> universities = ReadXls.UniversitiesFromXls();
+        ArrayList<University> universities = XlsReader.UniversitiesFromXls();
         UniversitiesComparator universitiesComparator =
                 PickComparator.getUniversityComparator(UniversityComparatorTypes.UNIVERSITY_YEAR_OF_FOUNDATION);
         universities.sort(universitiesComparator);
