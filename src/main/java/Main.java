@@ -2,11 +2,10 @@ import comparators.StudentsComparator;
 import comparators.UniversitiesComparator;
 import comparators.comperatorEnums.StudentComparatorTypes;
 import comparators.comperatorEnums.UniversityComparatorTypes;
+import models.Statistics;
 import models.Student;
 import models.University;
-import services.JsonUtil;
-import services.PickComparator;
-import services.ReadXls;
+import services.*;
 
 import java.util.ArrayList;
 
@@ -41,7 +40,6 @@ public class Main {
             System.out.println(studentFromJson);
         });
 
-
         ArrayList<University> universities = ReadXls.UniversitiesFromXls();
         UniversitiesComparator universitiesComparator =
                 PickComparator.getUniversityComparator(UniversityComparatorTypes.UNIVERSITY_YEAR_OF_FOUNDATION);
@@ -70,5 +68,8 @@ public class Main {
             System.out.println(universityFromJson);
         });
 
+        ArrayList<Statistics> statistics = StatisticUtil.generateStatistic(students, universities);
+
+        XlsWriter.createStatisticReport(statistics, "src/main/resources/statisticReport.xlsx");
     }
 }
